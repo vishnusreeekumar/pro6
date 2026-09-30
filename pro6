@@ -1,0 +1,29 @@
+malware_database = {
+&quot;WannaCry&quot;: &quot;Ransomware&quot;,
+&quot;Zeus&quot;: &quot;Banking Trojan&quot;,
+&quot;ILOVEYOU&quot;: &quot;Worm&quot;,
+&quot;Emotet&quot;: &quot;Trojan&quot;,
+&quot;Stuxnet&quot;: &quot;Worm&quot;,
+&quot;Conficker&quot;: &quot;Worm&quot;,
+&quot;CryptoLocker&quot;: &quot;Ransomware&quot;,
+&quot;DarkComet&quot;: &quot;Remote Access Trojan (RAT)&quot;,
+&quot;Mirai&quot;: &quot;Botnet Malware&quot;,
+&quot;Pegasus&quot;: &quot;Spyware&quot;
+}
+print(&quot;========== Malware Analysis Report ==========\n&quot;)
+# Sample malware collected for analysis
+samples = [
+&quot;WannaCry&quot;,
+&quot;Zeus&quot;,
+&quot;Mirai&quot;,
+&quot;Pegasus&quot;,
+&quot;UnknownSample&quot;
+]
+# Analyze each malware sample
+for sample in samples:
+category = malware_database.get(
+
+sample,
+&quot;Unknown Malware - Requires Further Analysis&quot;
+)
+print(f&quot;{sample:20} --&gt; {category}&quot;)
